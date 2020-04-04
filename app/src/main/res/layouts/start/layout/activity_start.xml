@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/start_activity_layout"
+                android:id="@+id/activity_start"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context="io.bahlsenwitz.tschess.start.ActivityStart">
@@ -27,7 +27,7 @@
 
             android:gravity="center_horizontal"
 
-            android:text="tschess"
+            android:text="fuck"
 
             android:textColor="#FFFFFF"
             android:textSize="100sp"/>
