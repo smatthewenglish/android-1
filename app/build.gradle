@@ -21,21 +21,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     sourceSets {
         main.res.srcDirs += 'src/main/res/layouts'
         main.res.srcDirs += 'src/main/res/layouts/start'
     }
-
-//    sourceSets {
-//        main {
-//            res.srcDirs =
-//                    [
-//                            'src/main/res/layouts/start',
-//                            'src/main/res'
-//                    ]
-//        }
-//    }
 }
 
 dependencies {
