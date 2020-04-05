@@ -1,244 +1,64 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/activity_start"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="io.bahlsenwitz.tschess.start.ActivityStart">
-
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="io.bahlsenwitz.tschess.start.ActivityStart">
     <LinearLayout
-            android:layout_width="0px"
-            android:layout_height="0px"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
-
-    <TextView
-            android:id="@+id/title"
-
+            android:id="@+id/ll_main_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-
-            android:layout_centerInParent="true"
-
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp"
-
-
-
-            android:gravity="center_horizontal"
-
-            android:text="fuck"
-
-            android:textColor="#FFFFFF"
-            android:textSize="100sp"/>
-
-
-
-<!--    <ImageView-->
-<!--            android:id="@+id/logo"-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="300dp"-->
-
-<!--            android:layout_below="@+id/title"-->
-<!--            android:layout_centerInParent="true"-->
-
-<!--            android:layout_marginBottom="30dp"-->
-
-<!--            android:background="@null"-->
-<!--            android:clickable="false"-->
-<!--            android:focusable="false"-->
-<!--            android:gravity="center_horizontal|center_vertical"-->
-
-<!--            android:scaleType="fitXY"-->
-<!--            android:src="@mipmap/logo" -->
-<!--    />-->
-
-    <ProgressBar
-
-            android:id="@+id/progress_bar"
-
-            android:layout_width="wrap_content"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_height="wrap_content"
-
-            android:indeterminate="true"
-
-            android:layout_marginTop="88dp"
-            android:layout_below="@+id/title"
-            android:layout_centerInParent="true"
-
-            android:visibility="invisible"/>
-
-
-
-
-    <RelativeLayout
-            android:id="@+id/edits"
-
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-
-
-
-            android:layout_centerInParent="true"
-
-            android:gravity="center_horizontal">
-
-        <EditText
-                android:id="@+id/username"
-                android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#444444"
+            android:padding="25dp"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="USERNAME"
-                android:inputType="text"
-                android:ellipsize="start"
-                android:gravity="center_horizontal"
-                android:singleLine="true"/>
-
+                android:textSize="25dp"
+                android:textColor="#6dffbf"
+                android:padding="30dp"
+                android:text="tschess"/>
         <EditText
-                android:id="@+id/password"
-                android:layout_width="360dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/username"
-                android:hint="PASSWORD"
+                android:id="@+id/et_user_name"
+                android:hint="username"
+                android:textColor="#6bfff7"
+                android:textColorHint="#52afaa"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <EditText
+                android:id="@+id/et_password"
+                android:hint="password"
+                android:textColor="#6bfff7"
+                android:textColorHint="#52afaa"
+                android:textAlignment="center"
                 android:inputType="textPassword"
-                android:ellipsize="start"
-                android:gravity="center_horizontal"
-                android:singleLine="true"/>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-            android:id="@+id/buttons"
-
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/edits"
-
-            android:layout_centerInParent="true"
-
-            android:gravity="center_horizontal">
-
-
-        <RelativeLayout
-                android:id="@+id/login"
-
-                android:layout_width="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="25dp"
+                android:orientation="horizontal">
 
-
-
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_vertical|center_horizontal"
-
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="15dp"
-
-
-                android:clickable="true"
-
-                android:focusable="true">
-
-            <ImageView
-                    android:id="@+id/key_image"
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-
-                    android:layout_centerVertical="true"
-                    android:background="@null"
-
-                    android:scaleType="fitXY"
-
-            />
-
-            <TextView
-                    android:id="@+id/login_text"
-
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-
-
-                    android:layout_centerVertical="true"
-
-                    android:duplicateParentState="true"
-
+            <Button
+                    android:id="@+id/btn_submit"
                     android:text="login"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-                    android:textSize="20sp" />
+            <Button
+                    android:id="@+id/btn_reset"
+                    android:text="create"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-        </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
 
-
-        <RelativeLayout
-                android:id="@+id/create"
-
-                android:layout_width="195dp"
-                android:layout_height="wrap_content"
-
-                android:layout_centerHorizontal="true"
-
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginStart="10dp"
-
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="10dp"
-
-                android:layout_marginBottom="15dp"
-
-                android:clickable="true"
-
-                android:focusable="true">
-
-            <ImageView
-                    android:id="@+id/create_image"
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-
-                    android:layout_centerVertical="true"
-                    android:background="@null"
-
-                    android:scaleType="fitXY"
-                    />
-
-            <TextView
-                    android:id="@+id/create_text"
-
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-
-
-                    android:layout_centerVertical="true"
-
-                    android:duplicateParentState="true"
-
-                    android:text="create account"
-
-                    android:textSize="20sp"/>
-
-        </RelativeLayout>
-
-
-    </RelativeLayout>
-
-
-    <ImageView
-            android:id="@+id/consensys"
-
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="15dp"
-
-
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"/>
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
